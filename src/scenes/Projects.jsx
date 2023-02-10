@@ -227,7 +227,7 @@ const Projects = () => {
               languages.language4,
               languages.language5,
             ]}
-            git="https://pokedoki-app.netlify.app/"
+            git="https://github.com/Haadiiii/Bookstore"
             live="https://deploy-preview-6--haadii-bookstore.netlify.app/"
           />
           <div
