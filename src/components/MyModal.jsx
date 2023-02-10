@@ -28,7 +28,7 @@ const MyModal = ({ title, img, description, visible, onClose, lang, git, live })
         </div>
         <div className="flex flex-wrap gap-2 mb-5">
         {lang?.map((item) => (
-        <ul key={item.id}>
+        <ul key={item}>
                 <li className="text-black text-[14px] border-black border-[1px] p-1 md:text-[17px]">
                     {item}
                 </li>
