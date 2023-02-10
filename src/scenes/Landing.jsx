@@ -57,7 +57,7 @@ const Landing = ({ setSelectedPage }) => {
             </span>
           </p>
 
-          <p className="mt-10 text-lg mb-7 text-sm text-center md:text-start">
+          <p className="mt-10 text-lg mb-7 text-lg text-center md:text-start">
             I am a full-stack developer proficient in front-end, back-end
             development, and agile methodologies with a strong focus on creating
             efficient, scalable, and user-friendly web applications.
