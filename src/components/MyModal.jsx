@@ -16,7 +16,7 @@ const MyModal = ({ title, img, description, visible, onClose, lang, git, live })
       onClick={handleOnCLose}
       className="fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm flex justify-center items-center z-50"
     >
-      <div className="bg-white w-4/5 h-[580px] sm:h-3/5 md:h-[550px] lg:w-[880px] p-2 rounded">
+      <div className="bg-white w-4/5 sm:h-3/5 md:h-[550px] lg:w-[880px] p-2 rounded">
         <div className="flex justify-between p-4">
           <h1 className="text-black text-[24px] lg:text-[32px] font-semibold">{title}</h1>
           <button className="text-black text-lg font-semibold " onClick={onClose}>
@@ -53,7 +53,7 @@ const MyModal = ({ title, img, description, visible, onClose, lang, git, live })
               <a
                 className="bg-gradient-rainblue text-deep-blue rounded-sm w-32 h-12 font-semibold
               hover:bg-blue hover:text-white transition duration-500 mt-5 py-3 px-4
-              cursor-pointer"
+              cursor-pointer mb-5 "
               target={"_blank"}
               href={git}
               >
