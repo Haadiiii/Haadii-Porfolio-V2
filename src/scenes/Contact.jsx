@@ -2,20 +2,41 @@ import LineGradient from "../components/LineGradient";
 import { useForm } from "react-hook-form";
 import { motion } from "framer-motion";
 import contact from "../assets/contact-image.jpeg";
+import { useState } from "react";
 const Contact = () => {
-  const {
-    register,
-    trigger,
-    formState: { errors },
-  } = useForm();
+  const[values, setValues] = useState({
+    name: "",
+    email: "",
+    message: "",
+  })
 
-  const onSubmit = async (e) => {
-    console.log("~ e", e);
-    const isValid = await trigger();
-    if (!isValid) {
-      e.preventDefault();
+  const onSubmit = (e) => {
+    e.preventDefault();
+    Email.send({
+      Host : "smtp.elasticemail.com",
+      Username : "hammali99@gmail.com",
+      Password : "580996889DE4204A9578F0EB26EA982FD74A",
+      To : 'hammali99@gmail.com',
+      From : "hammali99@gmail.com",
+      Subject : "contact information",
+      Body : `Name: ${values.name} <br/> Email: ${values.email} <br/> Message: ${values.message}`
+  }).then(message => {
+    if(message === 'OK'){
+      alert('Your message has been sent, We will contact you shortly')
+    }else{
+      alert('There is error at sending message. ')
     }
+  }
+  );
   };
+
+  const handleChange = (e) => {
+    setValues({
+      ...values,
+      [e.target.name]: e.target.value
+    })
+  }
+
 
   return (
     <section id="contact" className="contact py-40">
@@ -69,42 +90,26 @@ const Contact = () => {
           className="basis-1/2 mt-10 md:mt-0"
         >
           <form
-            target="_blank"
             onSubmit={onSubmit}
-            action="https://formsubmit.co/hammali99@gmail.com"
-            method="POST"
           >
             <input
               className="w-full bg-blue font-semibold placeholder-opaque-black p-3"
               type="text"
               placeholder="NAME"
-              {...register("name", {
-                required: true,
-                maxLength: 100,
-              })}
+              name="name"
+              onChange={handleChange}
+              value={values.name}
             />
-            {errors.name && (
-              <p className="text-red mt-1">
-                {errors.name.type === "required" && "This field is required."}
-                {errors.name.type === "maxLength" && "Max length is 100 char."}
-              </p>
-            )}
 
             <input
               className="w-full bg-blue font-semibold placeholder-opaque-black p-3 mt-5"
-              type="text"
+              type="email"
               placeholder="EMAIL"
-              {...register("email", {
-                required: true,
-                pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-              })}
+              name="email"
+              onChange={handleChange}
+              value={values.email}
+              
             />
-            {errors.email && (
-              <p className="text-red mt-1">
-                {errors.email.type === "required" && "This field is required."}
-                {errors.email.type === "pattern" && "Invalid email address."}
-              </p>
-            )}
 
             <textarea
               className="w-full bg-blue font-semibold placeholder-opaque-black p-3 mt-5"
@@ -112,19 +117,10 @@ const Contact = () => {
               placeholder="MESSAGE"
               rows="4"
               cols="50"
-              {...register("message", {
-                required: true,
-                maxLength: 2000,
-              })}
+              onChange={handleChange}
+              value={values.message}
+             
             />
-            {errors.message && (
-              <p className="text-red mt-1">
-                {errors.message.type === "required" &&
-                  "This field is required."}
-                {errors.message.type === "maxLength" &&
-                  "Max length is 2000 char."}
-              </p>
-            )}
 
             <button
               className="p-5 bg-yellow font-semibold text-deep-blue mt-5 hover:bg-red hover:text-white transition duration-500"
