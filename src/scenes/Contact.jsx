@@ -15,7 +15,6 @@ const Contact = () => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    const regex = new RegExp('/^[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$/');
 
     if (!values.name || !values.email || !values.message) {
       setMsg("Please enter all required fields");
@@ -25,12 +24,6 @@ const Contact = () => {
 
     if (values.email !== values.email.toLowerCase()) {
       setMsg("Please enter lowercase letters.");
-      setOpen(true);
-      return;
-    }
-
-    if (!regex.test(values.email)) {
-      setMsg("Invalid email address!");
       setOpen(true);
       return;
     }
@@ -49,7 +42,7 @@ const Contact = () => {
         setOpen(true);
       } else {
         setMsg("There is an error at sending message.");
-        setOpen(false);
+        setOpen(true);
       }
     });
   };
