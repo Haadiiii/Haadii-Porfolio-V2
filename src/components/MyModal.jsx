@@ -14,7 +14,7 @@ const MyModal = ({ title, img, description, visible, onClose, lang, git, live })
     <div
       id="container"
       onClick={handleOnCLose}
-      className="fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm flex justify-center items-center z-50"
+      className="fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm flex justify-center items-center z-50 sm:h-[760px] md:h-[550px] lg:h-[600px]"
     >
       <div className="bg-white w-4/5 sm:h-3/5 md:h-[550px] lg:w-[880px] p-2 rounded">
         <div className="flex justify-between p-4">
@@ -38,7 +38,7 @@ const MyModal = ({ title, img, description, visible, onClose, lang, git, live })
         </div>
 
         <div className="flex flex-col sm:flex-row sm:gap-3 md:gap-3">
-          <img className="ss:w-4/5 sm:w-2/5 md:w-3/5 lg:w-3/5" src={img} alt="" />
+          <img className="ss:w-4/5 sm:w-2/5 sm:h-3/5 md:w-3/5 lg:w-3/5" src={img} alt="" />
           <div className="flex flex-col">
             <p className="text-black text-lg md:w-4/5 mt-10">{description}</p>
             <div className="flex gap-[20px]">

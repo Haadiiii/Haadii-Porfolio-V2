@@ -40,18 +40,18 @@ const Project = ({ img, title, description, button, lang, git, live }) => {
     <>
       <motion.div variants={projectVariant} className="relative ">
         <div className={overlayStyles}>
-          <p className="text-2xl font-playfair">{title}</p>
-          <p className="mt-7">{description.slice(0, 100)}...</p>
+          <p className="text-2xl font-playfair w-[220px]">{title}</p>
+          <p className="mt-2 sm:w-[260px]">{description.slice(0, 100)}...</p>
           <button
             className="bg-gradient-rainblue text-deep-blue rounded-sm py-3 px-7 font-semibold
-              hover:bg-blue hover:text-white transition duration-500 mt-5"
+              hover:bg-blue hover:text-white transition duration-500 mt-3"
             onClick={() => setShowMyModal(true)}
           >
             {button}
           </button>
         </div>
         <img
-          className="h-full w-full"
+          className="h-[300px] w-full"
           src={`${projectTitle}`}
           alt={projectTitle}
         />
