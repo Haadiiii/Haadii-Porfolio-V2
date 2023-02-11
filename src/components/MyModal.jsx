@@ -40,7 +40,7 @@ const MyModal = ({ title, img, description, visible, onClose, lang, git, live })
         <div className="flex flex-col sm:flex-row sm:gap-3 md:gap-3">
           <img className="ss:w-4/5 sm:w-2/5 sm:h-3/5 md:w-3/5 lg:w-3/5" src={img} alt="" />
           <div className="flex flex-col">
-            <p className="text-black text-lg md:w-4/5 mt-10">{description}</p>
+            <p className="text-black text-lg md:w-4/5 mt-10 ss:mt-[-1px]">{description}</p>
             <div className="flex gap-[20px]">
               <a
                 className="bg-gradient-rainblue text-deep-blue rounded-sm w-32 h-12 font-semibold
