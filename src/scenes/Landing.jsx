@@ -15,14 +15,14 @@ const Landing = ({ setSelectedPage }) => {
       <div className="basis-3/5 z-10 mt-16 md:mt-32 flex justify-center md:order-2">
         {isAboveLarge ? (
           <div
-            className="relative z-0 ml-20 before:absolute before:-top-20 before:-left-20 before:rounded-t-[400px]
+            className="relative z-0 ml-20 before:absolute before:-top-10 before:-left-10 before:rounded-t-[400px]
        before:w-full before:max-w-400px md:before:max-w-400px before:h-full before:border-2
-        before:border-blue before:z-[-1]"
+        before:border-blue before:z-[-1] before:transition duration-500 before:hover:border-yellow"
           >
             <img
               alt="profile"
               className="hover:filter rounded-t-[400px]  hover:saturate-200 transition duration-500 z-10 w-full
-              h-full max-w-400px md:max-w-400px lg:max-w-400px xl:max-w-400px 2xl:max-w-400px "
+              h-[500px] max-w-400px md:max-w-400px lg:max-w-400px xl:max-w-400px 2xl:max-w-400px "
               src={profile}
             />
           </div>
