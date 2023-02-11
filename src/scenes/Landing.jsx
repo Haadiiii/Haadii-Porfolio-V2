@@ -21,7 +21,8 @@ const Landing = ({ setSelectedPage }) => {
           >
             <img
               alt="profile"
-              className="hover:filter rounded-t-[400px]  hover:saturate-200 transition duration-500 z-10 w-full max-w-400px md:max-w-400px lg:max-w-400px xl:max-w-400px 2xl:max-w-400px "
+              className="hover:filter rounded-t-[400px]  hover:saturate-200 transition duration-500 z-10 w-full
+              h-full max-w-400px md:max-w-400px lg:max-w-400px xl:max-w-400px 2xl:max-w-400px "
               src={profile}
             />
           </div>
@@ -64,9 +65,7 @@ const Landing = ({ setSelectedPage }) => {
             Demonstrated ability to work collaboratively with cross-functional
             teams is complemented by my strong project management,
             communication, and leadership skills, and drive projects from
-            concept to deployment, resulting in a 50% increase in website
-            traffic and a 75% reduction in development time. Key skills include
-            HTML, CSS, JavaScript, React, Ruby, Rails, and PostgreSQL
+            concept to deployment.
           </p>
         </motion.div>
 
