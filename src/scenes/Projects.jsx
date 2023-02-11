@@ -38,7 +38,7 @@ const Project = ({ img, title, description, button, lang, git, live }) => {
 
   return (
     <>
-      <motion.div variants={projectVariant} className="relative">
+      <motion.div variants={projectVariant} className="relative ">
         <div className={overlayStyles}>
           <p className="text-2xl font-playfair">{title}</p>
           <p className="mt-7">{description.slice(0, 100)}...</p>
@@ -51,7 +51,7 @@ const Project = ({ img, title, description, button, lang, git, live }) => {
           </button>
         </div>
         <img
-          className="min-h-[280px]"
+          className="h-full w-full"
           src={`${projectTitle}`}
           alt={projectTitle}
         />
