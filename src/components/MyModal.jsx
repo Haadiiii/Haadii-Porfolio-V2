@@ -14,9 +14,9 @@ const MyModal = ({ title, img, description, visible, onClose, lang, git, live })
     <div
       id="container"
       onClick={handleOnCLose}
-      className="fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm flex justify-center items-center z-50 sm:h-[760px] md:h-[550px] lg:h-[600px]"
+      className="fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm flex justify-center items-center z-50 sm:h-full md:h-full lg:h-full"
     >
-      <div className="bg-white w-4/5 sm:h-3/5 md:h-[550px] lg:w-[880px] p-2 rounded">
+      <div className="bg-white w-4/5 sm:h-2/5 md:h-[550px] lg:w-[880px] p-2 rounded">
         <div className="flex justify-between p-4">
           <h1 className="text-black text-[24px] lg:text-[32px] font-semibold">{title}</h1>
           <button className="text-black text-lg font-semibold " onClick={onClose}>
